@@ -1,0 +1,25 @@
+buildscript {
+	repositories {
+    	jcenter()
+	}
+	dependencies {
+		classpath (group: 'com.sahlbach.gradle', name: 'gradle-jetty-eclipse-plugin', version: '1.9.+')
+	}
+}
+
+plugins {
+	id 'com.github.jacobono.wsdl' version '1.7.7'
+}
+
+allprojects {
+	apply plugin: "eclipse"
+}
+
+subprojects {
+	apply plugin: "java"
+	repositories {
+		mavenCentral()
+	}
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+}
