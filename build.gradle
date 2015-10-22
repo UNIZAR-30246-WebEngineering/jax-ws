@@ -3,12 +3,13 @@ buildscript {
     	jcenter()
 	}
 	dependencies {
-		classpath (group: 'com.sahlbach.gradle', name: 'gradle-jetty-eclipse-plugin', version: '1.9.+')
-	}
+		classpath 'com.sahlbach.gradle:gradle-jetty-eclipse-plugin:1.9.2'
+    }
 }
 
 plugins {
 	id 'com.github.jacobono.wsdl' version '1.7.7'
+    id "de.undercouch.download" version "2.0.0"
 }
 
 allprojects {

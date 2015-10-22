@@ -1,16 +1,13 @@
+apply plugin: 'war'
+apply plugin: 'jettyEclipse'
+apply plugin: 'eclipse-wtp'
+
 eclipse {
 	project {
-    	name = "jax-ws.hellows-jar"
+    	name = "jax-ws.hellows-war"
 	}
 }
 
 dependencies {
 	compile "com.sun.xml.ws:jaxws-rt:2.2.8"
-}
-
-task server(type: JavaExec) {
-	group 			= 'Hello World Service'
-    description 	= 'Start a SOAP endpoint'
-    main 			= 'bigws.hellows.Server'
-	classpath 		= sourceSets.main.runtimeClasspath
 }
